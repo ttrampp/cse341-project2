@@ -1,0 +1,5 @@
+# Tells Git to ignore sensitive files
+
+.env
+
+node_modules
