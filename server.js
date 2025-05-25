@@ -15,6 +15,9 @@ app.use(express.json());                                //Let me automatically t
 const movieRoutes = require('./routes/movies');         //Let's connect the routes/movies.js so I know what to do when someone goes to /movies. Bring in movie route.
 app.use('/movies', movieRoutes);                        //When someone goes to /movies, use the routes defined in the movies.js file
 
+const genresRoutes = require('./routes/genres');        //Le'ts connect the routes/genres.js so I know what to do when someone gose to /genres. Bring in genre route.
+app.use('/genres', genresRoutes);                       //When someone goes to /genres, use the routes defined in the genres.js file
+
 // Connect to DB and start server
 connectToDb()                                           //Hey database, are you there and ready?
     .then(() => {

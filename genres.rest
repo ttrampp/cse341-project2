@@ -1,0 +1,37 @@
+### Get all genres
+GET http://localhost:3000/genres
+Content-Type: application/json
+
+###
+
+### Get a single genre by ID
+GET http://localhost:3000/genres/6832618a338e0bb4ad53096a
+Content-Type: application/json
+
+###
+
+### Create a new genre
+POST http://localhost:3000/genres
+Content-Type: application/json
+
+{
+  "name": "Action",
+  "description": "Fast-paced films possibily with physical stunts and energy",
+}
+
+###
+
+### Update a genre
+PUT http://localhost:3000/genres/6832618a338e0bb4ad53096a
+Content-Type: application/json
+
+{
+  "name": "Action",
+  "description": "Fast-paced films with physical stunts and energy",
+}
+
+###
+
+### Delete a genre
+DELETE http://localhost:3000/genres/6832618a338e0bb4ad53096a
+Content-Type: application/json

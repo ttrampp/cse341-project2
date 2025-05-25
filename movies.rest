@@ -1,17 +1,19 @@
 ### Get all movies
-GET https://cse341-project2-f9x0.onrender.com/movies
+GET http://localhost:3000/movies
 Content-Type: application/json
 
 ###
 
 ### Get a single movie by ID
-GET https://cse341-project2-f9x0.onrender.com/movies/6832618a338e0bb4ad53096a
+GET ### Get all movies
+GET http://localhost:3000/movies/6832618a338e0bb4ad53096a
 Content-Type: application/json
 
 ###
 
 ### Create a new movie
-POST https://cse341-project2-f9x0.onrender.com/movies
+POST ### Get all movies
+GET http://localhost:3000/movies
 Content-Type: application/json
 
 {
@@ -34,7 +36,7 @@ Content-Type: application/json
 ###
 
 ### Update a movie
-PUT https://cse341-project2-f9x0.onrender.com/movies/6832618a338e0bb4ad53096a
+PUT http://localhost:3000/movies/6832618a338e0bb4ad53096a
 Content-Type: application/json
 
 {
@@ -57,5 +59,6 @@ Content-Type: application/json
 ###
 
 ### Delete a movie
-DELETE https://cse341-project2-f9x0.onrender.com/movies/6832618a338e0bb4ad53096a
+DELETE ### Get all movies
+GET http://localhost:3000/movies/6832618a338e0bb4ad53096a
 Content-Type: application/json
