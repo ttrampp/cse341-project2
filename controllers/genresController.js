@@ -24,7 +24,7 @@ const getSingle = async (req, res) =>{
     }
 };
 
-//POST creat genre
+//POST create genre
 const createGenre = async (req, res) =>{
     try {
         const {name, description} = req.body;

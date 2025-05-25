@@ -1,27 +1,39 @@
-const mongodb = require("../data/database");
-const ObjectId = require("mongodb").ObjectId;
+// Talks directly to MongoDB database to get/save data
+const {getDb, connectToDb} = require("../data/database");
+const {ObjectId} = require('mongodb');
 
+//GET all genres
 const getAllGenres = async () => {
-    return await mongodb.getDb().db().collection("genres").find().toArray();
+    const db = getDb();
+    return await db().collection("genres").find().toArray();
 };
 
+//GET a genre by id
 const getGenreById = async (id) => {
-    return await mongodb.getDb().db().collection("genres").findOne({_id: new ObjectId(id)});
+    const db = getDb();
+    return await db().collection("genres").findOne({_id: new ObjectId(id)});
 };
 
+
+//Add a new genre
 const addGenre = async (genreData) => {
-    return await mongodb.getDb().db().collection("genres").insertOne(genreData);
+    const db = getDb();
+    return await db().collection("genres").insertOne(genreData);
 };
 
+//UPDATE a genre
 const updateGenre = async (id, genreData) => {
-    return await mongodb.getDb().db().collection("genres").updateOne(
+    const db = getDb();
+    return await db().collection("genres").updateOne(
         {_id: new ObjectId(id)},
         {$set: genreData}
     );
 };
 
+//DELETE a genre
 const deleteGenre = async (id) => {
-    return await mongodb.getDb().db().collection("genres").deleteOne({_id: new ObjectId(id)});
+    const db = getDb();
+    return await db().collection("genres").deleteOne({_id: new ObjectId(id)});
 };
 
 module.exports = {

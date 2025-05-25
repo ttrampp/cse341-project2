@@ -5,15 +5,13 @@ Content-Type: application/json
 ###
 
 ### Get a single movie by ID
-GET ### Get all movies
-GET http://localhost:3000/movies/6832618a338e0bb4ad53096a
+GET http://localhost:3000/movies/68327df7a9fffda8a5873b7f
 Content-Type: application/json
 
 ###
 
 ### Create a new movie
-POST ### Get all movies
-GET http://localhost:3000/movies
+POST http://localhost:3000/movies
 Content-Type: application/json
 
 {
@@ -36,7 +34,7 @@ Content-Type: application/json
 ###
 
 ### Update a movie
-PUT http://localhost:3000/movies/6832618a338e0bb4ad53096a
+PUT http://localhost:3000/movies/68327df7a9fffda8a5873b7f
 Content-Type: application/json
 
 {
@@ -59,6 +57,5 @@ Content-Type: application/json
 ###
 
 ### Delete a movie
-DELETE ### Get all movies
-GET http://localhost:3000/movies/6832618a338e0bb4ad53096a
+DELETE http://localhost:3000/movies/6832618a338e0bb4ad53096a
 Content-Type: application/json

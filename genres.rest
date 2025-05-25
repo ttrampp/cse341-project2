@@ -16,7 +16,7 @@ Content-Type: application/json
 
 {
   "name": "Action",
-  "description": "Fast-paced films possibily with physical stunts and energy",
+  "description": "Fast-paced films possibily with physical stunts and energy"
 }
 
 ###
