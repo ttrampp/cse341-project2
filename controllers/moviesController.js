@@ -14,7 +14,7 @@ const getAll = async (req, res) => {
 //GET one movie by ID
 const getSingle = async (req, res) => {
     try {
-        const id = req.param.id;
+        const id = req.params.id;
         const movie = await movieModel.getMovieById(id);
         if (!movie) {
             return res.status(404).json({error: "Movie not found. Don't start the popcorn just yet! 😟"});

@@ -1,0 +1,61 @@
+### Get all movies
+GET https://cse341-project2-f9x0.onrender.com/movies
+Content-Type: application/json
+
+###
+
+### Get a single movie by ID
+GET https://cse341-project2-f9x0.onrender.com/movies/6832618a338e0bb4ad53096a
+Content-Type: application/json
+
+###
+
+### Create a new movie
+POST https://cse341-project2-f9x0.onrender.com/movies
+Content-Type: application/json
+
+{
+  "title": "Miracle",
+  "director": "Gavin O'Connor",
+  "year": 2004,
+  "genre": "Drama, Sports",
+  "rating": 10,
+  "duration": 136,
+  "summary": "The true story of Herb Brooks, the player-turned-coach who led the 1980 U.S. Olympic hockey team to victory over the seemingly invincible Soviet squad.",
+  "cast": [
+    "Kurt Russell",
+    "Patricia Clarkson",
+    "Noah Emmerich",
+    "Eddie Cahill",
+    "Patrick O'Brien Demsey"
+  ]
+}
+
+###
+
+### Update a movie
+PUT https://cse341-project2-f9x0.onrender.com/movies/6832618a338e0bb4ad53096a
+Content-Type: application/json
+
+{
+  "title": "Miracle",
+  "director": "Gavin O'Connor",
+  "year": 2004,
+  "genre": "Drama, Sports",
+  "rating": 7.5,
+  "duration": 136,
+  "summary": "The true story of Herb Brooks, the player-turned-coach who led the 1980 U.S. Olympic hockey team to victory over the seemingly invincible Soviet squad.",
+  "cast": [
+    "Kurt Russell",
+    "Patricia Clarkson",
+    "Noah Emmerich",
+    "Eddie Cahill",
+    "Patrick O'Brien Demsey"
+  ]
+}
+
+###
+
+### Delete a movie
+DELETE https://cse341-project2-f9x0.onrender.com/movies/6832618a338e0bb4ad53096a
+Content-Type: application/json
