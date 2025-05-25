@@ -29,6 +29,12 @@ const getSingle = async (req, res) => {
 const createMovie = async (req, res) => {
     try{
         const movieData = req.body;
+
+        //Simple validation
+        if (!movieData.title || !movieData.director || !movieData.year) {
+            return res.status(400).json({error: "Title, Director, and Year are required fields."});
+        }
+
         const result = await movieModel.addMovie(movieData);
         res.status(201).json(result);
     } catch (err) {
@@ -41,6 +47,12 @@ const updateMovie = async (req, res) => {
     try {
         const id = req.params.id;
         const movieData = req.body;
+
+        //Simple validation
+        if (!movieData.title || !movieData.director || !movieData.year) {
+            return res.status(400).json({error: "Title, Director, and Year are required fields."});
+        }
+
         const result = await movieModel.updateMovie(id, movieData);
         if (result.modifiedCount === 0) {
             return res.status(404).json({error: "Sorry friend, either that movie couldn't be found OR it couldn't be changed."});
