@@ -14,7 +14,7 @@ const getAll = async (req, res) =>{
 const getSingle = async (req, res) =>{
     try {
         const id = req.params.id;
-        const genre = await genreModel.getGenreById();
+        const genre = await genreModel.getGenreById(id);
         if (!genre) {
             return res.status(404).json({error: "Genre not found. Sorry about that."});
         }
