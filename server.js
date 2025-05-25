@@ -4,6 +4,10 @@ const express =  require('express');                    //Hey, bring in Express 
 const cors = require('cors');                           //This lets us say it's okay for other websites to talk to my API
 const {connectToDb} = require('./data/database');      //Hey, go grab the connectToDb function from our database.js file in the data folder
 
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
+
+
 const app = express();                                  //Okay, now let's create the actual app using Express.
 const port = process.env.PORT || 3000;                  //Listen for people visiting my site on the port in .env file
 
@@ -17,6 +21,8 @@ app.use('/movies', movieRoutes);                        //When someone goes to /
 
 const genresRoutes = require('./routes/genres');        //Le'ts connect the routes/genres.js so I know what to do when someone gose to /genres. Bring in genre route.
 app.use('/genres', genresRoutes);                       //When someone goes to /genres, use the routes defined in the genres.js file
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));    //creates my swagger ui page
 
 // Connect to DB and start server
 connectToDb()                                           //Hey database, are you there and ready?
