@@ -1,4 +1,4 @@
-const mongodb = require("../db/connect");
+const mongodb = require("../data/database");
 const ObjectId = require("mongodb").ObjectId;
 
 const getAllGenres = async () => {
