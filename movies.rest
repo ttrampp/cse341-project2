@@ -18,7 +18,10 @@ Content-Type: application/json
   "title": "Miracle",
   "director": "Gavin O'Connor",
   "year": 2004,
-  "genre": "Drama, Sports",
+  "genre": [
+    "Drama",
+    "Sports"
+  ],
   "mpaaRating": "PG",
   "duration": 136,
   "summary": "The true story of Herb Brooks, the player-turned-coach who led the 1980 U.S. Olympic hockey team to victory over the seemingly invincible Soviet squad.",
