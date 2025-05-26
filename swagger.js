@@ -5,7 +5,7 @@ const doc = {
         title: 'CSE341 Project 2 API',
         description: 'API documentation for Movies and Genres collections',
     },
-    host: 'https://cse341-project2-f9x0.onrender.com',
+    host: 'cse341-project2-f9x0.onrender.com',
     schemes: ['https', 'http'],
 };
 
