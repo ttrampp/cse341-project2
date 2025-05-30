@@ -7,6 +7,8 @@ const {connectToDb} = require('./data/database');      //Hey, go grab the connec
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 
+const authRoute = require("./routes/authRoute");
+
 // Required for login session tracking
 const session = require("express-session");
 const passport = require("passport");
@@ -70,6 +72,9 @@ app.use('/movies', movieRoutes);                        //When someone goes to /
 
 const genresRoutes = require('./routes/genres');        //Le'ts connect the routes/genres.js so I know what to do when someone gose to /genres. Bring in genre route.
 app.use('/genres', genresRoutes);                       //When someone goes to /genres, use the routes defined in the genres.js file
+
+app.use("/auth", authRoute);
+
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));    //creates my swagger ui page
 
