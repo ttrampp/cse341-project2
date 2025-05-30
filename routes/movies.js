@@ -2,7 +2,7 @@
 const express = require("express");
 const router = express.Router();
 const movieController = require("../controllers/moviesController");
-const {ensureAuthenticated} = require('../middleware/authMiddleware');
+const {ensureAuthenticated} = require('../middleware/authenticate');
 
 //GET all movies
 router.get("/", movieController.getAll);

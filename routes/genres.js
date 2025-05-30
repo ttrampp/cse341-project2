@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const genresController = require("../controllers/genresController");
-const {ensureAuthenticated} = require('../middleware/authMiddleware');
+const {ensureAuthenticated} = require('../middleware/authenticate');
 
 router.get("/", genresController.getAll);
 router.get("/:id", genresController.getSingle);
