@@ -102,6 +102,21 @@ app.get("/login-failure", (req, res) => {
 app.get("/protected", ensureAuthenticated, (req, res) => {
     res.send("Only those who are logged-in can see this.");
 });
+
+app.get('/', (req, res) => {
+    res.send(`
+        <h1>Welcome to the CSE341 Movie API</h1>
+        <p>Status: ${req.isAuthenticated() ? `Logged in as ${req.user.username}` : "Logged out"}</p>
+        <ul>
+            <li><a href="/auth/github">Login with GitHub</a></li>
+            <li><a href="/auth/logout">Logout</a></li>
+            <li><a href="/movies">View Movies (Protected)</a></li>
+            <li><a href="/genres">View Genres</a></li>
+            <li><a href="/api-docs">Swagger Documentation</a></li>
+        </ul>
+    `);
+});
+
     
 
 // Connect to DB and start server
