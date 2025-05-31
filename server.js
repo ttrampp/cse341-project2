@@ -110,8 +110,8 @@ app.get('/', (req, res) => {
         <ul>
             <li><a href="/auth/github">Login with GitHub</a></li>
             <li><a href="/auth/logout">Logout</a></li>
-            <li><a href="/movies">View Movies (Protected)</a></li>
-            <li><a href="/genres">View Genres</a></li>
+            <li><a href="/movies">View Movies (Modifications are Protected)</a></li>
+            <li><a href="/genres">View Genres (Modifications are Protected)</a></li>
             <li><a href="/api-docs">Swagger Documentation</a></li>
         </ul>
     `);
